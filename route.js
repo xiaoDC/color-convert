@@ -80,9 +80,9 @@ module.exports = function (fromModel) {
 	var graph = deriveBFS(fromModel);
 	var conversion = {};
 
-	var models = Object.keys(graph);
-	for (var len = models.length, i = 0; i < len; i++) {
-		var toModel = models[i];
+	var _models = Object.keys(graph);
+	for (var len = _models.length, i = 0; i < len; i++) {
+		var toModel = _models[i];
 		var node = graph[toModel];
 
 		if (node.parent === null) {
@@ -95,4 +95,3 @@ module.exports = function (fromModel) {
 
 	return conversion;
 };
-
